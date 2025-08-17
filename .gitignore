@@ -69,3 +69,8 @@ Dockerfile.*
 *.tmp
 *.temp
 *.~*
+
+
+
+Grammer Check.postman_collection.json
+Git Bash.txt
