@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "90643252-1b46-4fc3-afe8-d5980ec81a0e",
+		"name": "Grammer Check",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41667718"
+	},
+	"item": [
+		{
+			"name": "Grammar Check",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"She go to school every morning.\"\n}\n"
+				},
+				"url": {
+					"raw": "http://10.55.76.15:8062/api/interface/grammar_check",
+					"protocol": "http",
+					"host": [
+						"10",
+						"55",
+						"76",
+						"15"
+					],
+					"port": "8062",
+					"path": [
+						"api",
+						"interface",
+						"grammar_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paraphrase Text",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n     \"text\": \"I was feeling very tired because I had been working all day without taking any breaks.\",\n     \"style\": \"Shortened\"\n }\n\n\n// {\n//     \"text\": \"She finished her homework quickly.\",\n//     \"style\": \"Expanded\"\n// }"
+				},
+				"url": {
+					"raw": "http://10.55.76.15:8062/api/interface/paraphrase",
+					"protocol": "http",
+					"host": [
+						"10",
+						"55",
+						"76",
+						"15"
+					],
+					"port": "8062",
+					"path": [
+						"api",
+						"interface",
+						"paraphrase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Install Required Packages",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/interface/install_packages",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"interface",
+						"install_packages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Connection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.55.76.15:8062/api/hello",
+					"protocol": "http",
+					"host": [
+						"10",
+						"55",
+						"76",
+						"15"
+					],
+					"port": "8062",
+					"path": [
+						"api",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

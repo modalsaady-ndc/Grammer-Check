@@ -1,0 +1,71 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment directories
+env/
+venv/
+*.egg-info/
+
+# Distribution/build artifacts
+build/
+dist/
+*.egg
+*.whl
+
+# Log and debug files
+*.log
+*.bak
+*.swp
+
+# IDE files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+*.iml
+
+# Environment and configuration files
+.env
+*.ini
+*.cfg
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test coverage reports
+htmlcov/
+.coverage
+*.cover
+.cache
+.pytest_cache/
+
+# Static files
+staticfiles/
+
+# Database and other generated data
+*.sqlite3
+*.db
+
+# Docker
+*.env
+*.pid
+*.sock
+Dockerfile.*
+
+# Ignore compiled code
+*.so
+*.dll
+*.dylib
+
+# HDF5 files
+*.h5
+*.hdf5
+
+# CSV and other data files
+*.csv
+*.tsv
+
+# Ignore any temporary files
+*.tmp
+*.temp
+*.~*

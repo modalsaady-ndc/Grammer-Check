@@ -1,0 +1,84 @@
+$ cd D:/NDC/Python/Flask_React_project/BackEnd
+$ export FLASK_APP=Main.py
+$ flask shell
+>> db
+>> db.create_all()
+
+
+
+
+
+
+-To Migrate new modal to database:-
+$ pipenv install flask_migrate
+
+-To show the flask commandd:-
+$ flask db
+
+-To display the migration folder using:
+$ flask db init
+
+-To start the migration when create new table like "user table":
+$ flask db migrate -m "add user table"
+and then here it will create new (version)
+
+-IF we don't want to create new version in migrate folder just type:-
+$ flask db upgrade
+
+
+-If you are using pip to manage your Python packages in your Flask application, you can update the requirements.txt file by running the following command in your terminal:
+> pip freeze > requirements.txt
+
+-To install the all package that is used in project:-
+> pip install -r requirements.txt
+
+
+
+
+-Nedd to add new table in models of pythen then migrate it to SQL Server:-
+1- $ flask db upgrade
+2- $ export FLASK_APP=Main.py
+3- $ flask shell
+4- >> db
+5- >> db.create_all()
+
+
+
+
+Note:
+
+The db.create_all() function does not recreate or update a table if it already exists. 
+For example, if you modify your model by adding a new column, and run the db.create_all() function, 
+the change you make to the model will not be applied to the table if the table already exists in the database. 
+The solution is to delete all existing database tables with the db.drop_all() function and then recreate 
+them with the db.create_all() function like so:
+
+1- $ flask db upgrade
+2- $ export FLASK_APP=Main.py
+3- $ flask shell
+4- >> db
+5- >> db.drop_all()
+6- >> db.create_all()
+
+
+
+
+------------------------------------------------------------------------------------------------------
+
+9- Migrate the Classes from Backend to the Postgres:
+
+$ cd D:/NDC/Python/EducationAppointments
+$ export FLASK_APP=run.py
+$ flask shell
+>> db
+>> db.create_all()
+
+
+
+-Another Way Migrate the Classes from Backend to the Postgres:
+
+$ cd D:/NDC/Python/relay_onsumer_readings_be
+$ export FLASK_APP=run.py
+$ flask db init
+$ flask db migrate -m "Description of changes"
+$ flask db upgrade
